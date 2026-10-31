@@ -1,7 +1,9 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
+
 android {
     namespace = "id.sch.smkn4tanjungpinang.pintary"
     compileSdk = 35
@@ -13,8 +15,13 @@ android {
         versionCode = 1
         versionName = "1.0.0"
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 }
 
-dependencies {
-    implementation("androidx.activity:activity-ktx:1.9.3")
+kotlin {
+    jvmToolchain(17)
 }
